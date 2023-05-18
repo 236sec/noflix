@@ -1,7 +1,7 @@
 import Image from "next/image"
 import reactDom from "react-dom"
 import poster from "../../public/poster.jpg"
-import MovieCard from "@/component/Moviecard"
+import MovieCard from "@/components/Moviecard"
 
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <>
         <>hello</>
         <>test</>
-        <div className='flex'>
+        <div className='flex gap-5'>
           <MovieCard />
           <MovieCard />
           <MovieCard />
