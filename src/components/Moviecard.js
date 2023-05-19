@@ -29,10 +29,9 @@ export default function MovieCard(props) {
             className={`transition-all duration-300 object-fill w-64 h-[24rem] ${isHover ? "rounded-none" : "rounded-lg"}`}
           />
         
-        <div className={`my-0 w-full h-2/6 absolute bottom-0 bg-black bg-opacity-50 transition-all duration-${isHover ? "500" : "100"}  ${isHover ? "opacity-100" : "opacity-0"}`}>
+        <div className={`my-0 mx-1 w-full h-2/6 absolute bottom-0 bg-black bg-opacity-50 transition-all duration-${isHover ? "500" : "100"}  ${isHover ? "opacity-100" : "opacity-0"}`}>
           <h1 className="text-3xl font-bold" >{movie.Title}</h1>
-          <p className="text-lg">Year:{movie.year}</p>
-          <p className="text-lg">IMDB Score:{movie.Type}</p>
+          <p className="text-lg mt-7 flex justify-between"><span>{movie.Year}</span><span>IMDB Score:{movie.Type}</span></p>
         </div>
       </div>
       

@@ -5,7 +5,7 @@ import search from "../../public/search.svg"
 
 export default function Navbar() {
     return (
-        <div className="mt-0 mx-0 w-full bg-slate-800 fixed text-xl">
+        <div className="mt-0 mx-0 w-full bg-slate-800 fixed text-xl z-10 opacity-50">
             <div className="flex max-w-4xl mx-auto justify-between">
                 <ul className="flex gap-11">
                     <li><Link href='/' >Home</Link></li>

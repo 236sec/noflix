@@ -24,9 +24,7 @@ const Home = () => {
  },[]);
   return (
     <>
-        <>hello</>
-        <>test</>
-        <div className='flex flex-wrap gap-6 w-9/12 mt-4 mx-auto max-w-4xl'>
+        <div className='flex flex-wrap gap-6 w-9/12 mt-0 mx-auto max-w-4xl'>
           {movies.map((movie) => (<MovieCard movie={movie}/>))}
         </div>
     </>
