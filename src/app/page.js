@@ -9,7 +9,7 @@ export default function Home() {
     <>
         <>hello</>
         <>test</>
-        <div className='flex flex-wrap justify-start items-start gap-4'>
+        <div className='flex flex-wrap gap-6 w-9/12 mt-4 mx-auto bg-white max-w-4xl'>
           <MovieCard className="flex-grow-0 mb-72" />
           <MovieCard className="flex-grow-0 mb-72" />
           <MovieCard className="flex-grow-0 mb-72" />
