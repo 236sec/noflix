@@ -9,12 +9,13 @@ export default function Home() {
     <>
         <>hello</>
         <>test</>
-        <div className='flex gap-5'>
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
-          <MovieCard />
+        <div className='flex flex-wrap justify-start items-start gap-4'>
+          <MovieCard className="flex-grow-0 mb-72" />
+          <MovieCard className="flex-grow-0 mb-72" />
+          <MovieCard className="flex-grow-0 mb-72" />
+          <MovieCard className="flex-grow-0 mb-72" />
+          <MovieCard className="flex-grow-0 mb-72" />
+          <MovieCard className="flex-grow-0 mb-72" />
         </div>
     </>
   )
