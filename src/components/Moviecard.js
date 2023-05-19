@@ -3,7 +3,8 @@ import Image from "next/image";
 import poster from "../../public/poster.jpg";
 import React, { useState } from "react";
 
-export default function MovieCard() {
+
+export default function MovieCard(props) {
   const [isHover, setIsHover] = useState(false);
 
   const handleHover = () => {
@@ -13,27 +14,25 @@ export default function MovieCard() {
   const handleLeave = () => {
     setIsHover(false);
   };
-  const movieTitle = "Blade Runner";
-  const movieYear = "hi";
-  const movieImdbScore = ""; 
+
+  const movie = props.movie
+  console.log(movie)
   return (
-    <div className={`bg-white mx-3`} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+    <div className={`mx-3`} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
       <div className={`transition-all duration-300 relative w-64 h-[24rem]`}>
         <div className="w-full h-full">
           <Image
             alt="Poster"
-            src={poster}
+            src={movie.Poster !== "N/A" ?  movie.Poster : "https://via.placeholder.com/400"}
             width={2000}
             height={3000}
-            layout="responsive"
-            objectFit="cover"
             className={`transition-all duration-300 ${isHover ? "rounded-none" : "rounded-lg"}`}
           />
         </div>
-        <div className={`my-0 w-full h-32 absolute bottom-10 bg-black bg-opacity-50 transition-all duration-${isHover ? "500" : "100"}  ${isHover ? "opacity-100" : "opacity-0"}`}>
-          <h1 className="text-xl font-bold" >{movieTitle}</h1>
-          <p className="text-lg">Year:{movieYear}</p>
-          <p className="text-lg">IMDB Score:{movieImdbScore}</p>
+        <div className={`my-0 w-full h-2/6 absolute bottom-0 bg-black bg-opacity-50 transition-all duration-${isHover ? "500" : "100"}  ${isHover ? "opacity-100" : "opacity-0"}`}>
+          <h1 className="text-3xl font-bold" >{movie.Title}</h1>
+          <p className="text-lg">Year:{movie.year}</p>
+          <p className="text-lg">IMDB Score:{movie.Type}</p>
         </div>
       </div>
       
