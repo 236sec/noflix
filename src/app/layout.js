@@ -12,8 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={inter.className}>
-        <div className='bg-white w-screen h-screen bg-gradient-to-bl from-slate-700 to-slate-900 text-white'>
+      <body className={`${inter.className} w-screen h-screen bg-white m-0 p-0`} >
+        <div className='bg-gradient-to-bl from-slate-700 to-slate-900 text-white'>
           <NavBar />
           {children}
         </div>
