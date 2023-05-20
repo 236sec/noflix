@@ -24,4 +24,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    width: 100vh;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }

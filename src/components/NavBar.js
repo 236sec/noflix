@@ -22,6 +22,7 @@ export default function Navbar(props) {
         event.preventDefault();
         props.searchMovie(searchTerm)
         setSearchTerm("")
+        window.scrollTo({top:0,behavior:"smooth"});
     }
 
     const handleChange = (event) => {
