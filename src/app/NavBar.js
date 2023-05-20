@@ -6,7 +6,7 @@ import search from "../../public/search.svg"
 import { useState } from "react"
 
 export default function Navbar() {
-    const [isSearchBar,setSearchBar] = useState(false)
+    const [isSearchBar,setSearchBar] = useState(true)
     const handleOnclickSearchBar = () => {
         setSearchBar(isSearchBar ? false : true)
     }
@@ -23,7 +23,7 @@ export default function Navbar() {
                         <div onClick={handleOnclickSearchBar}>
                             <Image src={search} alt="search-icon" height={24} width={24} className="hover:cursor-pointer" />
                         </div>
-                        <input type="search" className={`bg-white transition-all ease-in-out duration-1000 ${isSearchBar ? "w-45" : "w-0"}`}></input>
+                        <input type="search" className={`bg-white transition-[max-width] ease-in-out duration-300 ${isSearchBar ? "max-w-[45rem]" : "max-w-[0rem]"}`}></input>
                     </form>
                 </div>
             </div>
