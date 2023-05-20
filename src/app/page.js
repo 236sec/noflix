@@ -1,7 +1,4 @@
 "use client"
-import Image from "next/image"
-import reactDom from "react-dom"
-import poster from "../../public/poster.jpg"
 import MovieCard from "@/components/Moviecard"
 import { useEffect,useState } from "react"
 import Navbar from "@/components/NavBar"
@@ -19,16 +16,23 @@ const Home = () => {
     const movies = setMovies(data.Search)
     console.log("Do response")
   }
+  const handleSearch = (event) => {
+    event.preventDefault()
+    searchMovie("marvel")
+  }
   useEffect( () => {
     searchMovie('spider')
  },[]);
   return (
-    <>
-        <Navbar />
+    <div>
+        <Navbar searchMovie={searchMovie} />
         <div className='flex flex-wrap gap-6 w-9/12 mt-0 mx-auto max-w-4xl pb-10'>
           {movies.map((movie) => (<MovieCard movie={movie}/>))}
         </div>
-    </>
+        <form onSubmit={handleSearch}>
+          <button type="submit">Search</button>
+        </form>
+    </div>
   )
 }
 
