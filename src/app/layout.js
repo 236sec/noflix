@@ -1,6 +1,5 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import NavBar from './NavBar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,7 +13,6 @@ export default function RootLayout({ children }) {
     <html lang="en" className='scroll-smooth'>
       <body className={`${inter.className} w-screen h-screen bg-white m-0 p-0`} >
         <div className='bg-gradient-to-bl from-slate-700 to-slate-900 text-white'>
-          <NavBar />
           {children}
         </div>
       </body>

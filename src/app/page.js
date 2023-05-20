@@ -4,6 +4,7 @@ import reactDom from "react-dom"
 import poster from "../../public/poster.jpg"
 import MovieCard from "@/components/Moviecard"
 import { useEffect,useState } from "react"
+import Navbar from "@/components/NavBar"
 
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=b590d884';
 
@@ -23,6 +24,7 @@ const Home = () => {
  },[]);
   return (
     <>
+        <Navbar />
         <div className='flex flex-wrap gap-6 w-9/12 mt-0 mx-auto max-w-4xl pb-10'>
           {movies.map((movie) => (<MovieCard movie={movie}/>))}
         </div>
