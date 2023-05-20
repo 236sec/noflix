@@ -18,15 +18,15 @@ export default function MovieCard(props) {
   const movie = props.movie
   console.log(movie)
   return (
-    <div className={`mx-3`} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
-      <div className={`transition-all duration-300 relative`}>
+    <div className={`mx-3 w-64 h-[24rem]`} onMouseEnter={handleHover} onMouseLeave={handleLeave}>
+      <div className={`transition-all duration-500 relative ${isHover ? "w-72 h-[27rem] z-10" : "w-64 h-[24rem]"}`}>
         
           <Image
             alt="Poster"
             src={movie.Poster !== "N/A" ?  movie.Poster : "https://via.placeholder.com/400"}
             width={2000}
             height={3000}
-            className={`transition-all duration-300 object-fill w-64 h-[24rem] ${isHover ? "rounded-none" : "rounded-3xl"} ${isHover ? "shadow-2xl" : "shadow-sm"}`}
+            className={`transition-all duration-500 object-fill w-full h-full ${isHover ? "rounded-none" : "rounded-3xl"} ${isHover ? "shadow-2xl" : "shadow-sm"}`}
           />
         
         <div className={`my-0 mx-0 w-full h-2/6 absolute bottom-0 left-0 p-1 bg-black bg-opacity-50 transition-all duration-${isHover ? "500" : "100"}  ${isHover ? "opacity-100" : "opacity-0"}`}>

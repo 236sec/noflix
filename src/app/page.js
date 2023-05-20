@@ -22,7 +22,7 @@ const Home = () => {
   return (
     <div>
         <Navbar searchMovie={searchMovie} />
-        <div className='flex flex-wrap gap-6 w-9/12 mt-0 mx-auto max-w-4xl pb-10'>
+        <div className='flex flex-wrap gap-6 w-9/12 mt-0 mx-auto max-w-4xl pb-10 space-y-3'>
           {movies.map((movie) => (<MovieCard movie={movie}/>))}
         </div>
     </div>

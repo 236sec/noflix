@@ -31,7 +31,7 @@ export default function Navbar(props) {
 
     return (
         <>
-            <div className="mt-0 mx-0 w-full fixed text-xl z-10 top-0 bg-opacity-75 bg-slate-800">
+            <div className="mt-0 mx-0 w-full fixed text-xl z-50 top-0 bg-opacity-75 bg-slate-800">
                 <div className="flex max-w-4xl mx-auto justify-between">
                     <ul className="flex gap-11">
                         <li><Link href='/' >Home</Link></li>
