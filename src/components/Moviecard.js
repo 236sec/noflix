@@ -26,7 +26,7 @@ export default function MovieCard(props) {
             src={movie.Poster !== "N/A" ?  movie.Poster : "https://via.placeholder.com/400"}
             width={2000}
             height={3000}
-            className={`transition-all duration-500 object-fill w-full h-full ${isHover ? "rounded-none" : "rounded-3xl"} ${isHover ? "shadow-2xl" : "shadow-sm"}`}
+            className={`transition-all duration-500 object-fill w-full h-full ${isHover ? "rounded-none shadow-2xl" : "rounded-3xl shadow-sm"}`}
           />
         
         <div className={`my-0 mx-0 w-full h-2/6 absolute bottom-0 left-0 p-1 bg-black bg-opacity-50 transition-all duration-${isHover ? "500" : "100"}  ${isHover ? "opacity-100" : "opacity-0"}`}>
