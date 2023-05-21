@@ -19,10 +19,10 @@ export default function Navbar(props) {
     }
 
     const handleSearch = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         props.searchMovie(searchTerm)
         setSearchTerm("")
-        window.scrollTo({top:0,behavior:"smooth"});
+        window.scrollTo({top:0,behavior:"smooth"})
     }
 
     const handleChange = (event) => {
@@ -31,18 +31,18 @@ export default function Navbar(props) {
 
     return (
         <>
-            <div className="mt-0 mx-0 w-full fixed text-xl z-50 top-0 bg-opacity-75 bg-slate-800">
-                <div className="flex max-w-4xl mx-auto justify-between">
-                    <ul className="flex gap-11">
+            <div className="mt-0 mx-0 w-full h-8 fixed text-xl z-50 top-0 bg-opacity-75 bg-slate-800">
+                <div className="flex max-w-4xl w-full h-full mx-auto justify-between">
+                    <ul className="flex gap-11 items-center">
                         <li><Link href='/' >Home</Link></li>
                         <li><Link href='/' >Movies</Link></li>
                         <li><Link href='/' >Series</Link></li>
                     </ul>
-                    <form className="flex gap-2" onSubmit={handleSearch}>
+                    <form className="flex gap-2 items-center" onSubmit={handleSearch}>
                         <div onClick={handleOnclickSearchBar}>
                             <Image src={search} alt="search-icon" height={24} width={24} className="hover:cursor-pointer" />
                         </div>
-                        <input id='searchBar' onChange={handleChange} value={searchTerm} type="search" className={`bg-white h-full rounded-md text-base text-black transition-[max-width] ease-in-out duration-500 ${isSearchBar ? "max-w-[45rem] p-1" : "max-w-[0rem] p-0"}`}></input>
+                        <input id='searchBar' onChange={handleChange} value={searchTerm} type="search" className={`bg-white h-5/6 rounded-md text-base text-black transition-[max-width] ease-in-out duration-500 ${isSearchBar ? "max-w-[45rem] p-1" : "max-w-[0rem] p-0"}`}></input>
                     </form>
                 </div>
             </div>
