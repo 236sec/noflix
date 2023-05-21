@@ -3,30 +3,24 @@ import MovieCard from "@/components/Moviecard"
 import { useEffect,useState } from "react"
 import Navbar from "@/components/NavBar"
 import NotFound from "@/components/NotFound"
+import axios from "axios"
 
 const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=b590d884';
 
 
-const setFullPage = () => {
-  return <style jsx global>{`
-        body {
-          margin: 0;
-          padding: 0;
-          background: #f0f0f0;
-          height: 100vh;
-          width: 100vw;
-          overflow: hidden;
-        }
-      `}</style>
-}
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const searchMovie = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
-    const data = await response.json();
-    const movies = setMovies(data.Search)
-    console.log("Do response")
+    let abortController = new AbortController();
+    try{
+      const response = await axios.get(`${API_URL}&s=${title}`,{signal: abortController.signal});
+      const movies = setMovies(response.data.Search);
+      console.log("Do response");
+    }catch(error){
+      console.log("Error",error)
+    }
+    return () => abortController.abort();
   }
 
   useEffect( () => {
