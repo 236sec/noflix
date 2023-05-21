@@ -32,8 +32,8 @@ export default function MovieCard(props) {
         <div className={`my-0 mx-0 w-full h-2/6 absolute bottom-0 left-0 p-1 bg-black bg-opacity-50 transition-all duration-${isHover ? "500" : "100"}  ${isHover ? "opacity-100" : "opacity-0"}`}>
           <div className="w-full h-full relative">
             <h1 className="text-3xl font-bold absolute top-0 line-clamp-2" >{movie.Title}</h1>
-            <p className="text-lg absolute bottom-0 left-0">{movie.Year}</p>
-            <p className="text-lg absolute bottom-0 right-0">{movie.Type}</p>
+            <p className="text-xl absolute bottom-0 left-0">{movie.Type}</p>
+            <p className="text-lg absolute bottom-0 right-0">{movie.Year}</p>
           </div>
         </div>
       </div>
