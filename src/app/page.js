@@ -5,8 +5,8 @@ import Navbar from "@/components/NavBar"
 import NotFound from "@/components/NotFound"
 import axios from "axios"
 
-const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=b590d884';
-
+const API_KEY = process.env.API_KEY;
+const API_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}`;
 
 
 const Home = () => {
