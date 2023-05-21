@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div className="w-full h-full m-0 p-0">
         <Navbar searchMovie={searchMovie} />
-        <div className='flex flex-wrap gap-6 w-9/12 mt-0 mx-auto max-w-4xl space-y-3 h-full'>
+        <div className='flex flex-wrap gap-6 w-9/12 mt-0 mx-auto max-w-4xl space-y-3 h-full mb-16'>
           {movies ? movies.map((movie) => (<MovieCard movie={movie}/>)) : <NotFound />}
         </div>
     </div>

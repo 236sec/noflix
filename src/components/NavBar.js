@@ -24,6 +24,12 @@ export default function Navbar(props) {
         setSearchTerm("")
         window.scrollTo({top:0,behavior:"smooth"})
     }
+    const handleHome = (event) => {
+        event.preventDefault()
+        props.searchMovie("spider")
+        setSearchTerm("")
+        window.scrollTo({top:0,behavior:"smooth"})
+    }
 
     const handleChange = (event) => {
         setSearchTerm(event.target.value)
@@ -34,9 +40,7 @@ export default function Navbar(props) {
             <div className="mt-0 mx-0 w-full h-8 fixed text-xl z-50 top-0 bg-opacity-75 bg-slate-800">
                 <div className="flex max-w-4xl w-full h-full mx-auto justify-between">
                     <ul className="flex gap-11 items-center">
-                        <li><Link href='/' >Home</Link></li>
-                        <li><Link href='/' >Movies</Link></li>
-                        <li><Link href='/' >Series</Link></li>
+                        <li onClick={handleHome}><Link href='/' >Home</Link></li>
                     </ul>
                     <form className="flex gap-2 items-center" onSubmit={handleSearch}>
                         <div onClick={handleOnclickSearchBar}>
