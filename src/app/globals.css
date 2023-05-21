@@ -24,8 +24,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    width: 100vw;
+    min-width: 100vw;
+    min-width: -webkit-fill-available;
     min-height: 100vh;
     min-height: -webkit-fill-available;
-    
+    margin: 0;
+    padding: 0;
 }
